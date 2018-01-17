@@ -6,14 +6,16 @@ use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
-    public function getIndex(){
-      return "Index de produto";
-    }
-    public function getLista(){
-      return "Lista de Produtos";
-    }
-    public function postLista(){
-      return "Lista de Produtos";
-    }
+  public function getIndex(){
+    $produtos = ["nome" => "livro"];
+    //return view('produto.index', ["nome" => "livro"]);
+    return view('produto.index', compact("produtos"));
+  }
+  public function getLista(){
+    return "Lista de Produtos";
+  }
+  public function postLista(){
+    return "Lista de Produtos";
+  }
 
 }

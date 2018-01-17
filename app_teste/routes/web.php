@@ -22,3 +22,7 @@ Route::get('livro', ['uses' => 'LivroController@index', 'as' =>'livro.index']);
 Route::get('produto', ['uses' => 'ProdutoController@getIndex', 'as' =>'produto.index']);
 Route::get('produto/lista', ['uses' => 'ProdutoController@getLista', 'as' =>'produto.lista']);
 Route::post('produto', ['uses' => 'ProdutoController@postLista', 'as' =>'produto.lista']);
+Route::get('home', function(){
+  $usuario = 'Luis';
+  return view('home', compact('usuario'));
+});

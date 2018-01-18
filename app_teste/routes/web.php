@@ -23,6 +23,14 @@ Route::get('produto', ['uses' => 'ProdutoController@getIndex', 'as' =>'produto.i
 Route::get('produto/lista', ['uses' => 'ProdutoController@getLista', 'as' =>'produto.lista']);
 Route::post('produto', ['uses' => 'ProdutoController@postLista', 'as' =>'produto.lista']);
 Route::get('home', function(){
-  $usuario = 'Luis';
-  return view('home', compact('usuario'));
+  $usuarios = array(
+    ["nome" => "Luis"],
+    ["nome" => "Antonio"],
+    ["nome" => "Otávio"],
+    ["nome" => "Felipe"],
+    ["nome" => "João"],
+    ["nome" => "Alberto"]
+  );
+  $livros = array();
+  return view('home', compact('usuarios', 'livros'));
 });

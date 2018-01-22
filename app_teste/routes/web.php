@@ -34,3 +34,5 @@ Route::get('home', function(){
   $livros = array();
   return view('home', compact('usuarios', 'livros'));
 });
+
+Route::get('usuario', ['uses' => 'UsuarioController@index', 'as' => 'usuario']);
